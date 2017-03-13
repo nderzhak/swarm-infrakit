@@ -41,7 +41,7 @@ variable "bootstrap_key_name" {
 variable "infrakit_config_base_url" {
   type = "string"
   description = "Base URL for InfraKit configuration. there should be a bootstrap.sh, a variables.ikt and a config.tpl file"
-  default = "https://raw.githubusercontent.com/ndegory/swarm-infrakit/master"
+  default = "https://raw.githubusercontent.com/ndegory/swarm-infrakit/terraform-plugin"
 }
 
 variable "aufs_volume_size" {

@@ -5,7 +5,9 @@ provider "aws" {
   region = "${var.aws_region}"
 }
 
+
 # Data
+
 
 data "aws_iam_policy_document" "provisioner_role_doc" {
   # version = "2012-10-17"
@@ -104,6 +106,7 @@ data "template_file" "user_data" {
 
   vars {
     region = "${var.aws_region}"
+    name = "${var.aws_name}"
     vpc_id = "${aws_vpc.default.id}"
     subnet_id = "${aws_subnet.default.id}"
     security_group_id = "${aws_security_group.default.id}"
